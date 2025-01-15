@@ -91,6 +91,25 @@ VanillaTilt.init(document.querySelectorAll(".about-card"), {
     scale: 1.05
 });
 
+function togglePlay(audioId) {
+    const audio = document.getElementById(audioId);
+    const allAudios = document.querySelectorAll('audio');
+    
+    allAudios.forEach(a => {
+        if (a.id !== audioId && !a.paused) {
+            a.pause();
+            a.currentTime = 0;
+        }
+    });
+
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
+        audio.currentTime = 0;
+    }
+}
+
 function animateValue(element) {
     const finalValue = parseInt(element.getAttribute('data-value'));
     let currentValue = 0;
