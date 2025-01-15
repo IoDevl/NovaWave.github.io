@@ -221,7 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-document.querySelectorAll('.cyber-button').forEach(button => {
+document.querySelectorAll('.beats-section .cyber-button').forEach(button => {
     button.addEventListener('click', function() {
         this.innerHTML = 'PLAYING ♪';
         
