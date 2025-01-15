@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daflo | Music Producer</title>
+    <title>NovaWave</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Rajdhani:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -12,20 +12,20 @@
     <div id="particles-js"></div>
 
     <nav>
-        <div class="logo neon-text">DafloMadeThis</div>
+        <div class="logo neon-text">NovaWave</div>
         <div class="nav-links">
             <a href="#home" class="neon-link">Home</a>
             <a href="#beats" class="neon-link">Beats</a>
-            <a href="#about" class="neon-link">Chi Sono</a>
+            <a href="#about" class="neon-link">Informazioni</a>
             <a href="#contact" class="neon-link">Contatti</a>
         </div>
     </nav>
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1 class="glitch" data-text="DAFLO">DAFLO</h1>
+            <h1 class="glitch" data-text="NovaWave">NovaWave</h1>
             <div class="subtitle">
-                <span class="cyber-text">Produttore Musicale | Beat Maker</span>
+                <span class="cyber-text">Produttori Musicali | Beat Makers</span>
             </div>
         </div>
         <div class="line"></div>
@@ -36,64 +36,81 @@
         <div class="beats-grid">
             <div class="beat-card">
                 <div class="beat-image">
-                    <img src="beat1.jpg" alt="Esempio 1">
-                    <div class="play-overlay">
+                    <img src="img/1.jpeg" alt="Toxic">
+                    <div class="play-overlay" onclick="togglePlay('beat1')">
                         <span class="play-icon">▶</span>
                     </div>
                 </div>
                 <div class="beat-info">
-                    <h3>Esempio 1</h3>
-                    <p>X BPM</p>
-                    <button class="cyber-button">ASCOLTA ⚡</button>
+                    <h3>Toxic</h3>
+                    <p>125 BPM</p>
+                    <button class="cyber-button" onclick="togglePlay('beat1')">ASCOLTA ⚡</button>
                 </div>
+                <audio id="beat1" src="beat/beat1.mp3"></audio>
             </div>
+        
             <div class="beat-card">
                 <div class="beat-image">
-                    <img src="beat2.jpg" alt="Esempio 2">
-                    <div class="play-overlay">
+                    <img src="img/2.jpeg" alt="No More Fear">
+                    <div class="play-overlay" onclick="togglePlay('beat2')">
                         <span class="play-icon">▶</span>
                     </div>
                 </div>
                 <div class="beat-info">
-                    <h3>Esempio 2</h3>
-                    <p>Y BPM</p>
-                    <button class="cyber-button">ASCOLTA ⚡</button>
+                    <h3>No More Fear</h3>
+                    <p>140 BPM</p>
+                    <button class="cyber-button" onclick="togglePlay('beat2')">ASCOLTA ⚡</button>
                 </div>
+                <audio id="beat2" src="beat/beat2.mp3"></audio>
             </div>
+        
             <div class="beat-card">
                 <div class="beat-image">
-                    <img src="beat3.jpg" alt="Esempio 3">
-                    <div class="play-overlay">
+                    <img src="img/3.jpeg" alt="Flowers">
+                    <div class="play-overlay" onclick="togglePlay('beat3')">
                         <span class="play-icon">▶</span>
                     </div>
                 </div>
                 <div class="beat-info">
-                    <h3>Esempio 3</h3>
-                    <p>Z BPM</p>
-                    <button class="cyber-button">ASCOLTA ⚡</button>
+                    <h3>Flowers</h3>
+                    <p>131 BPM</p>
+                    <button class="cyber-button" onclick="togglePlay('beat3')">ASCOLTA ⚡</button>
                 </div>
+                <audio id="beat3" src="beat/beat3.mp3"></audio>
             </div>
         </div>
         <div class="line"></div>
     </section>
 
     <section id="about" class="about-section">
-        <h2 class="section-title">Chi Sono</h2>
+        <h2 class="section-title">Informazioni</h2>
         <div class="cyber-box main-bio">
-            <p>Sono Daflo, un produttore musicale che plasma il futuro del sound.</p>
+            <p class="producer-links">
+                <a href="https://www.instagram.com/yadee.music" target="_blank" class="producer-name">Yadee</a>
+                <span class="separator">|</span>
+                <a href="https://www.instagram.com/daflomadethis" target="_blank" class="producer-name">Daflo</a>
+                <span class="separator">|</span>
+                <a href="https://www.instagram.com/ybg_cosmic" target="_blank" class="producer-name">Cosmic</a>
+                <span class="separator">|</span>
+                <a href="https://www.instagram.com/chain.beats_" target="_blank" class="producer-name">Chain</a>
+            </p>
         </div>
         
         <div class="about-grid">
             <div class="about-card" data-tilt>
                 <div class="card-header">
-                    <div class="neon-icon">⚡</div>
-                    <h3>Esperienza</h3>
+                    <div class="neon-icon">💲</div>
+                    <h3>Servizi & Prezzi</h3>
                 </div>
                 <div class="card-content">
                     <ul class="cyber-list">
-                        <li><span class="highlight">6</span><span class="plus-symbol">+</span> anni di produzione</li>
-                        <li><span class="highlight">700</span><span class="plus-symbol">+</span> beat creati</li>
-                        <li><span class="highlight">30</span><span class="plus-symbol">+</span> artisti serviti</li>
+                        <div class="card-content">
+                            <ul class="cyber-list">
+                                <li><span class = "cyber-text"><a href="servizi.html#produzione" class="service-link">Produzione & Kit</a></span></li>
+                                <li><span class = "cyber-text"><a href="servizi.html#mixing" class="service-link">Servizi Mix/Master</a></span></li>
+                                <li><span class = "cyber-text"><a href="servizi.html#altro" class="service-link">Altro</a></span></li>
+                            </ul>
+                        </div>
                     </ul>
                 </div>
             </div>
@@ -109,7 +126,7 @@
                         <span class="cyber-tag">Hip Hop</span>
                         <span class="cyber-tag">Drill</span>
                         <span class="cyber-tag">Rap</span>
-                        <span class="cyber-tag">Boom Bap</span>
+                        <span class="cyber-tag">Sad</span>
                     </div>
                 </div>
             </div>
@@ -124,19 +141,13 @@
                         <div class="equipment-item">
                             <span class="eq-name">FL Studio</span>
                             <div class="progress-bar">
-                                <div class="progress" style="width: 100%"></div>
+                                <div class="progress" style="width: 75%"></div>
                             </div>
                         </div>
                         <div class="equipment-item">
                             <span class="eq-name">Ableton Live</span>
                             <div class="progress-bar">
-                                <div class="progress" style="width: 75%"></div>
-                            </div>
-                        </div>
-                        <div class="equipment-item">
-                            <span class="eq-name">Other</span>
-                            <div class="progress-bar">
-                                <div class="progress" style="width: 50%"></div>
+                                <div class="progress" style="width: 25%"></div>
                             </div>
                         </div>
                     </div>
@@ -147,7 +158,7 @@
     </section>
 
     <section id="contact" class="contact-section">
-        <h2 class="section-title cyber-glitch">CONTATTAMI</h2>
+        <h2 class="section-title cyber-glitch">CONTATTACI</h2>
         <form class="contact-form cyber-form">
             <div class="form-group">
                 <input type="text" required class="cyber-input">
@@ -169,7 +180,7 @@
     </section>
 
     <footer class="cyber-footer">
-        <p class="copyright"><span class="neon-text">© 2025 DafloMadeThis</span></p>
+        <p class="copyright"><span class="neon-text">© 2025 NovaWave</span></p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
