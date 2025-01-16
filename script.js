@@ -238,14 +238,15 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.highlight, .about-card, .beat-card').forEach(el => {
         observer.observe(el);
     });
-});
 
-document.querySelectorAll('.beats-section .cyber-button').forEach(button => {
-    button.addEventListener('click', function() {
-        this.innerHTML = 'PLAYING ♪';
-        
-        setTimeout(() => {
-            this.innerHTML = 'ASCOLTA ⚡';
-        }, 2000);
+    const playButtons = document.querySelectorAll('.beats-section .cyber-button, .service-card .cyber-button:not(.buy-button)');
+    playButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            this.innerHTML = 'PLAYING ♪';
+            
+            setTimeout(() => {
+                this.innerHTML = 'ASCOLTA ⚡';
+            }, 2000);
+        });
     });
 });
