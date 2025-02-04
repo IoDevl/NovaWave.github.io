@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found - NovaWave</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Rajdhani:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .error-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .error-code {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 8rem;
+            color: var(--neon-green);
+            text-shadow: 0 0 20px var(--neon-green);
+            margin-bottom: 20px;
+            animation: glitch 1s infinite;
+        }
+
+        .error-message {
+            font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .home-button {
+            background: transparent;
+            border: 2px solid var(--neon-green);
+            color: var(--neon-green);
+            padding: 15px 30px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .home-button:hover {
+            background: var(--neon-green);
+            color: var(--cyber-black);
+            box-shadow: 0 0 20px var(--neon-green);
+            transform: translateY(-3px);
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0) }
+            20% { transform: translate(-2px, 2px) }
+            40% { transform: translate(-2px, -2px) }
+            60% { transform: translate(2px, 2px) }
+            80% { transform: translate(2px, -2px) }
+            100% { transform: translate(0) }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <nav>
+        <div class="logo neon-text">NovaWave</div>
+        <div class="nav-links">
+            <a href="index.html" class="neon-link">Home</a>
+            <a href="beats.html" class="neon-link">Beats</a>
+            <a href="servizi.html" class="neon-link">Servizi</a>
+        </div>
+    </nav>
+
+    <section class="error-section">
+        <h1 class="error-code">404</h1>
+        <p class="error-message">Oops! Sembra che ti sia perso. Questa pagina non esiste :D</p>
+        <a href="index.html" class="home-button">Torna alla Home</a>
+    </section>
+
+    <footer class="cyber-footer">
+        <p class="copyright"><span class="neon-text">© 2025 NovaWave</span></p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
